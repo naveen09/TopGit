@@ -19,7 +19,7 @@
     function searchcontent() {
         var directive = {
             link: link,
-            templateUrl: "../views/templates/search.template.html",
+            templateUrl: "views/templates/search.template.html",
             restrict: 'EA',
             scope: {
                 data: '='

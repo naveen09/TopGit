@@ -34,7 +34,7 @@ mask{
     right: 0;
 }
 .fa{
-  line-height: 20px;
+  line-height: 20px !important;
 }
 .fa-lg{
   font-size: 1.5em;
