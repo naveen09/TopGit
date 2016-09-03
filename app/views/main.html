@@ -1,0 +1,41 @@
+<md-progress-linear class="md-warn" md-mode="indeterminate" ng-if="vm.showLoading">
+</md-progress-linear>
+<md-content layout="column">
+    <div class="header bg" layout="row" layout-sm="column">
+        <div class="logo" flex="">
+        </div>
+    </div>
+    <md-autocomplete class="searchbar" md-item-text="item" md-items="item in vm.allLanguages | filter : vm.searchText" md-no-cache="true" md-require-match="" md-search-text="vm.searchText" md-selected-item="vm.selectedItem" md-selected-item-change="vm.selectedItemChange(item)" placeholder="Search for a Language">
+        <md-item-template>
+            <span md-highlight-text="vm.searchText">
+                {{item}}
+            </span>
+        </md-item-template>
+        <md-not-found>
+            No Matches Found.
+        </md-not-found>
+    </md-autocomplete>
+    <md-content class="hint text_center">
+        <label ng-if="vm.selectedItem">
+            We've found {{vm.total_count | number}} repository results in {{vm.selectedItem}}
+        </label>
+    </md-content>
+    <md-content class="searchbar">
+        <md-slider-container>
+            <div layout="" layout-align="center center">
+                <span class="md-body-1">
+                    <i class="fa fa-stars fa-dark">
+                    </i>
+                    Stars
+                </span>
+            </div>
+            <md-slider aria-label="regular slider" class="md-primary" max="{{vm.rating_max}}" min="0" ng-disabled="!vm.selectedItem" ng-model="vm.rating" ng-mouseup="vm.getData()" step="100">
+            </md-slider>
+            <span style="margin-left: 10px">
+                {{vm.rating}}
+            </span>
+        </md-slider-container>
+    </md-content>
+    <searchcontent data="vm.items" layout-align="center center" ng-if="vm.items">
+    </searchcontent>
+</md-content>

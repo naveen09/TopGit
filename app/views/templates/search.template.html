@@ -1,0 +1,44 @@
+<md-content layout="row" layout-align="center center" layout-wrap="" style="width: 800px;margin:auto">
+    <md-content layout-padding="">
+        <md-card ng-repeat="item in data">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">
+                        <i class="fa fa-angle-double-right fa-dark fa-lg">
+                        </i>
+                        <a href="{{item.html_url}}">
+                            {{item.name}}
+                        </a>
+                    </span>
+                    <span class="md-subhead">
+                        Language: {{item.language}}
+                    </span>
+                    <span class="md-subhead">
+                        {{item.description}}
+                    </span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <img class="md-media-md card-media" src="{{item.owner.avatar_url}}">
+                    </img>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="center center">
+                <md-button class="md-primary" ng-href="{{item.html_url}}/issues" target="_blank">
+                    <md-icon class="fa fa-info fa-dark">
+                    </md-icon>
+                    {{item.open_issues}}
+                </md-button>
+                <md-button>
+                    <md-icon class="fa fa-star fa-dark">
+                    </md-icon>
+                    {{item.stargazers_count | number}}
+                </md-button>
+                <md-button>
+                    <md-icon class="fa fa-clock-o fa-dark">
+                    </md-icon>
+                    {{item.watchers_count | number}}
+                </md-button>
+            </md-card-actions>
+        </md-card>
+    </md-content>
+</md-content>

@@ -1,0 +1,70 @@
+body{
+  overflow-x: invisible;
+}
+.header{
+  height:  80px;
+  padding: 5px;
+}
+.bg{
+  background: #3F51B5;
+}
+.logo{
+  background: rgba(0, 0, 0, 0) url("../images/logo2.png") no-repeat scroll 0 0 / contain ;
+   height: 80px;
+   width: 400px;
+}
+.searchbar{
+  margin :  auto;
+  width: 800px;
+  padding: 20px;
+}
+.fa-dark{
+    color: #999999;
+}
+.result_info{
+  line-height: 70px;
+  color:white;
+  font-size: 1em;
+}
+mask{
+    margin: auto;
+    position: absolute; 
+    z-index: 9999;
+    left: 0;
+    right: 0;
+}
+.fa{
+  line-height: 20px;
+}
+.fa-lg{
+  font-size: 1.5em;
+}
+.hint {
+    left: 2px;
+    right: auto;
+    bottom: 7px; 
+    font-size: 0.8em;
+    line-height: 14px;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    color: grey;
+    margin:  auto;
+}
+.text_center{
+  text-align: center;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.searchbar{
+   width: 280px;
+}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+.searchbar{
+   width: 600px;
+}
+}
+@media only screen and (min-device-width : 500px) and (max-device-width : 700px) {
+.searchbar{
+   width: 580px;
+}
+}
